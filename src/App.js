@@ -20,7 +20,7 @@ function App() {
     <div className="wrapper">
       <h1>My Grocery List</h1>
       <ul>
-        {ingredientes.map(ingrediente => <li key={ingrediente.nombre}>{ingrediente.nombre}</li>)}
+        {ingredientes.map(ingrediente => <li key={ingrediente.id}>{ingrediente.nombre}</li>)}
       </ul>
     </div>
   )
