@@ -1,0 +1,111 @@
+{
+  "masaBase": {
+    "precio": 10000
+  },
+  "ingredientes": [
+    {
+      "nombre": "pollo",
+      "precio": 5000
+    },
+    {
+      "nombre": "peperoni",
+      "precio": 4500
+    },
+    {
+      "nombre": "queso",
+      "precio": 3000
+    },
+    {
+      "nombre": "carne",
+      "precio": 3000
+    },
+    {
+      "nombre": "jalapeños",
+      "precio": 3000
+    },
+    {
+      "nombre": "cilantro",
+      "precio": 3000
+    },
+    {
+      "nombre": "tomate",
+      "precio": 3000
+    },
+    {
+      "nombre": "BBQ",
+      "precio": 3000
+    },
+    {
+      "nombre": "piña",
+      "precio": 3000
+    },
+    {
+      "nombre": "ciruelas",
+      "precio": 3000
+    },
+    {
+      "nombre": "uvas pasas",
+      "precio": 3000
+    },
+    {
+      "nombre": "tocineta",
+      "precio": 3000
+    },
+    {
+      "nombre": "cordero",
+      "precio": 3000
+    },
+    {
+      "nombre": "pimenton",
+      "precio": 3000
+    },
+    {
+      "nombre": "cebolla",
+      "precio": 3000
+    },
+    {
+      "nombre": "queso cheddar",
+      "precio": 3000
+    },
+    {
+      "nombre": "pimienta",
+      "precio": 3000
+    },
+    {
+      "nombre": "champiñones",
+      "precio": 3000
+    },
+    {
+      "nombre": "lechuga",
+      "precio": 3000
+    },
+    {
+      "nombre": "canela",
+      "precio": 3000
+    },
+    {
+      "nombre": "rugula",
+      "precio": 3000
+    },
+    {
+      "nombre": "chorizo",
+      "precio": 3000
+    },
+    {
+      "nombre": "maiz",
+      "precio": 3000
+    },
+    {
+      "nombre": "aceitunas",
+      "precio": 3000
+    },
+    {
+      "nombre": "anchoas",
+      "precio": 3000
+    },
+    {
+      "nombre": "carne desmechada",
+      "precio": 3000
+    }
+  ]
+}
