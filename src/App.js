@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import './App.css'
+import { getIngredientes } from './services/ingredients'
 
 function App() {
+  const [ingredientes, setIngredientes] = useState([])
+
+  useEffect(() => {
+    let mounted = true;
+    getIngredientes()
+      .then(ingredientes => {
+        if(mounted) {
+          setIngredientes(ingredientes)
+        }
+      })
+    return () => mounted = false;
+  }, [])
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <h1>My Grocery List</h1>
+      <ul>
+        {ingredientes.map(ingrediente => <li key={ingrediente.nombre}>{ingrediente.nombre}</li>)}
+      </ul>
     </div>
-  );
+  )
 }
 
 export default App;
