@@ -107,5 +107,12 @@
       "nombre": "carne desmechada",
       "precio": 3000
     }
+  ],
+  "pizzas": [
+    {
+      "nombre": "Default",
+      "ingredientes": []
+    }
   ]
+
 }
