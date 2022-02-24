@@ -1,4 +1,5 @@
-export function getIngredientes() {
-  return fetch('http://localhost:3333/ingredientes')
-    .then(data => data.json())
+export const getIngredientes = async () => {
+  const response = await fetch('http://localhost:3333/ingredientes')
+  const data = await response.json()
+  return data
 }
