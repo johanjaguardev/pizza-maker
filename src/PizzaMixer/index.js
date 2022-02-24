@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { getIngredientes } from './../services/ingredients'
-function PizzaCreate() {
+import './style.scss'
+import { getIngredientes } from '../services/ingredients'
+function PizzaMixer() {
   const [ingredientes, setIngredientes] = useState([])
 
   useEffect(() => {
@@ -15,10 +16,13 @@ function PizzaCreate() {
   }, [])
  
   return(
-    <div className="Pizza Create">
-       {ingredientes.map(ingrediente => <button key={ingrediente.id}>{ingrediente.nombre}</button>)}
+    <div className="mixer">
+       {ingredientes.map(ingrediente => 
+        <button key={ingrediente.id} className="mixer__button">
+          {ingrediente.nombre}
+        </button>)}
     </div>
   )
 }
 
-export { PizzaCreate }
+export { PizzaMixer }

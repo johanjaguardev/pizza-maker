@@ -1,16 +1,16 @@
 import React from 'react'
-import { PizzaCreate } from './PizzaCreate'
+import { PizzaMixer } from './PizzaMixer'
 import { PizzaDashboard } from './PizzaDashboard'
-import { PizzaSend } from './PizzaSend'
+import { PizzaForm } from './PizzaForm'
 import './App.css'
 
 function App() {
   return (
     <React.Fragment>
       <h1>My Grocery List</h1>
-      <PizzaCreate></PizzaCreate>
+      <PizzaMixer></PizzaMixer>
       <PizzaDashboard></PizzaDashboard>
-      <PizzaSend></PizzaSend>
+      <PizzaForm></PizzaForm>
     </React.Fragment>
   )
 }
