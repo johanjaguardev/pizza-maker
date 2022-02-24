@@ -1,14 +1,40 @@
 .mixer {
+  background-color: whitesmoke;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 
   &__button {
-    background: darkred;
+    background: green;
     border-radius: 10px;
     color: white;
     cursor: pointer;
+    font-family: 'Roboto Slab', serif;
     font-size: 14px;
+    font-weight: 800;
     margin: .2em;
     padding: .2em .5em;
+
+    &:disabled,
+      &[disabled]{
+        border: 1px solid #999999;
+        background-color: darkgreen;
+        color: lime;
+      }
+  }
+
+  &__name {
+    margin: .2em 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 32px;
+  }
+
+  &__count {
+    &.red {
+      color: red;
+    }
+    &.green {
+      color: green;
+    }
   }
 }

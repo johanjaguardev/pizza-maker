@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 .pizza {
   display: flex;
   flex-direction: row;
+  font-family: 'Roboto Slab', serif;
 
   &__left {
     width: 50%;

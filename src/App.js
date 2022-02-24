@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='pizza'>
       <div className="pizza__left">
-        <h1>My Grocery List</h1>
+        <h1>Pizza Maker</h1>
         <PizzaMixer></PizzaMixer>
       </div>
       <div className='pizza_right'>
