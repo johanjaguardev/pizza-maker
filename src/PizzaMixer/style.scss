@@ -1,0 +1,10 @@
+.mixer {
+  &__button {
+    background: red;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin: 1em;
+    padding: 1em 2em;
+  }
+}
