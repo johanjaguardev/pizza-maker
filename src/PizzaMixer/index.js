@@ -23,7 +23,7 @@ function PizzaMixer() {
   const [pizza, setPizza] = useState({
     nombre: '',
     ingredientes: [],
-    precio: 0
+    precio: 10000
   })
 
   useEffect(() => {
