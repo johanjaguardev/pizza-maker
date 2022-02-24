@@ -10,6 +10,7 @@ function PizzaForm() {
       <input name="telefono" placeholder="Telefono:" className="form__telefono"/>
       <input name="pizza" placeholder="Nombre de la Pizza: " disabled className="form__pizza"/>
       <input name="fecha" placeholder="Fecha: " className="form__fecha" />
+      <button name="enviar">Enviar</button>
     </div>
   )
 }
