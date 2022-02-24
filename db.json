@@ -137,7 +137,8 @@
   "pizzas": [
     {
       "nombre": "Default",
-      "ingredientes": []
+      "ingredientes": [],
+      "precio": 0
     }
   ]
 

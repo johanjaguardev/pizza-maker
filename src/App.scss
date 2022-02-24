@@ -1,0 +1,8 @@
+.pizza {
+  display: flex;
+  flex-direction: row;
+
+  &__left {
+    width: 50%;
+  }
+}

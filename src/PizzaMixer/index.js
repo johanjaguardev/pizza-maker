@@ -17,10 +17,15 @@ function PizzaMixer() {
  
   return(
     <div className="mixer">
-       {ingredientes.map(ingrediente => 
+      <h2>Mixer</h2>
+      <input className="mixer__name" placeholder='Nombre de la pizza:' name="name"></input>
+      <div className="mixer__buttons">
+        {ingredientes.map(ingrediente => 
         <button key={ingrediente.id} className="mixer__button">
-          {ingrediente.nombre}
+            {ingrediente.nombre}
         </button>)}
+      </div>  
+   
     </div>
   )
 }
