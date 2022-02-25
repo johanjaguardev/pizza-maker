@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { getIngredientes } from './../services/ingredients'
+import { PizzaContext } from './../PizzaContext'
 import './style.scss'
-import { getIngredientes } from '../services/ingredients'
 function PizzaMixer() {
+  const {  
+    pizza,
+    setPizza
+  } = React.useContext(PizzaContext)
+  const [listaIngredientes, setListaIngredientes] = useState([])
   const onClickButton = (nombre, precio, e) => {
     console.log(`${nombre}: $${precio}`, e.target)
     console.log(pizza)
@@ -26,12 +32,6 @@ function PizzaMixer() {
       precio: pizza.precio
     })
   }
-  const [listaIngredientes, setListaIngredientes] = useState([])
-  const [pizza, setPizza] = useState({
-    nombre: '',
-    ingredientes: [],
-    precio: 10000
-  })
 
   useEffect(() => {
     let mounted = true;
@@ -43,7 +43,6 @@ function PizzaMixer() {
       })
     return () => mounted = false;
   }, [])
- 
   return(
     <div className="mixer">
       <h2>Mixer</h2>
@@ -68,9 +67,9 @@ function PizzaMixer() {
           ${(pizza.ingredientes.length < 15 || pizza.nombre === "" ) &&'red'}`}>
             Tu pizza lleva {pizza.ingredientes.length} ingredientes</p>
         <button className='mixer__create-btn' disabled={pizza.ingredientes.length < 15 || pizza.nombre === ""}>Crear Pizza</button>
-      </div>  
-   
+      </div>
     </div>
+ 
   )
 }
 
