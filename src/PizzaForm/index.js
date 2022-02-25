@@ -11,7 +11,7 @@ function PizzaForm() {
     <div className="fFormorm">
       <h2>Pizza </h2>
       <input name="nombre" placeholder="Nombre:" className="form__nombre"/>
-      <input name="precio" placeholder="Precio:" className="form__precio" />
+      <input name="precio" placeholder="Precio:" disabled className="form__precio" value={`$${pizza.precio}`} />
       <input name="telefono" placeholder="Telefono:" className="form__telefono"/>
       <input name="pizza" placeholder="Nombre de la Pizza: " disabled className="form__pizza" value={pizza.nombre}/>
       <input name="fecha" placeholder="Fecha: " className="form__fecha" />
