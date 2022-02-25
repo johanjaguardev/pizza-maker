@@ -19,6 +19,13 @@ function PizzaMixer() {
       e.target.disabled = false
     }
   }
+  const onChangeNameInput = (e) => {
+    setPizza({
+      nombre: e.target.value,
+      ingredientes: pizza.ingredientes,
+      precio: pizza.precio
+    })
+  }
   const [listaIngredientes, setListaIngredientes] = useState([])
   const [pizza, setPizza] = useState({
     nombre: '',
@@ -40,7 +47,12 @@ function PizzaMixer() {
   return(
     <div className="mixer">
       <h2>Mixer</h2>
-      <input className="mixer__name" placeholder='Nombre de la pizza:' name="name"></input>
+      <input 
+        className="mixer__name"
+        placeholder='Nombre de la pizza:'
+        name="name"
+        onChange={(e)=> onChangeNameInput(e)}
+      ></input>
       <div className="mixer__buttons">
         {listaIngredientes.map(ingrediente => 
         <button
@@ -51,7 +63,11 @@ function PizzaMixer() {
             {ingrediente.nombre}
         </button>)}
         <p className="mixer__price">Precio: ${pizza.precio}</p>
-        <p className={`mixer__count ${pizza.ingredientes.length >= 15 && 'green'} ${pizza.ingredientes.length < 15 && 'red'}`}>Tu pizza lleva {pizza.ingredientes.length} ingredientes</p>
+        <p className={`mixer__count 
+          ${pizza.ingredientes.length >= 15 && pizza.nombre !== "" && 'green'} 
+          ${(pizza.ingredientes.length < 15 || pizza.nombre === "" ) &&'red'}`}>
+            Tu pizza lleva {pizza.ingredientes.length} ingredientes</p>
+        <button className='mixer__create-btn' disabled={pizza.ingredientes.length < 15 || pizza.nombre === ""}>Crear Pizza</button>
       </div>  
    
     </div>

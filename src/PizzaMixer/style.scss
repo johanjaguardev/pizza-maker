@@ -16,11 +16,19 @@
     padding: .2em .5em;
 
     &:disabled,
-      &[disabled]{
-        border: 1px solid #999999;
-        background-color: darkgreen;
-        color: lime;
-      }
+    &[disabled],
+    &:hover,
+    &:focus {
+      border: 1px solid #999999;
+      background-color: darkgreen;
+      color: lime;;
+    }
+
+    &:disabled,
+    &[disabled]{
+      color: lightgreen;
+      cursor: not-allowed;
+    }
   }
 
   &__name {
@@ -35,6 +43,32 @@
     }
     &.green {
       color: green;
+    }
+  }
+
+  &__create-btn {
+    background: green;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin: .2em;
+    padding: .2em 1em;
+
+    &:disabled,
+    &[disabled],
+    &:hover,
+    &:focus {
+      border: 1px solid #999999;
+      background-color: darkgreen;
+      color: lightgreen;
+    }
+
+    &:disabled,
+    &[disabled]{
+      cursor: not-allowed;
     }
   }
 }
