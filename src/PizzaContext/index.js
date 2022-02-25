@@ -1,25 +1,16 @@
-import React, {useState, useEffect} from "react"
-import { getIngredientes } from './../services/ingredients'
+import React from "react"
 const PizzaContext = React.createContext()
-
 const PizzaProvider = (props) => {
-  const [listaIngredientes, setListaIngredientes] = useState([])
-  const [pizza, setPizza] = useState({
+  const [pizza, setPizza] = React.useState({
     nombre: '',
     ingredientes: [],
     precio: 10000
   })
 
-
-
-
   return(
     <PizzaContext.Provider value={{
-      listaIngredientes,
-      setListaIngredientes,
       pizza,
-      setPizza,
-      getIngredientes
+      setPizza
     }}>
       {props.children}
     </PizzaContext.Provider>

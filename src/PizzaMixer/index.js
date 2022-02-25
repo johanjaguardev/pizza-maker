@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { getIngredientes } from './../services/ingredients'
 import { PizzaContext } from './../PizzaContext'
 import './style.scss'
 function PizzaMixer() {
-
   const {  
-    listaIngredientes,
-    setListaIngredientes,
     pizza,
-    setPizza,
-    getIngredientes
+    setPizza
   } = React.useContext(PizzaContext)
+  const [listaIngredientes, setListaIngredientes] = useState([])
   const onClickButton = (nombre, precio, e) => {
     console.log(`${nombre}: $${precio}`, e.target)
     console.log(pizza)
