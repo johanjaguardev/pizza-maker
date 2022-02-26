@@ -3,10 +3,13 @@ import { PizzaContext } from './../PizzaContext'
 import './style.scss'
 
 function PizzaForm() {
+  const curr = new Date()
+  curr.setDate(curr.getDate() + 3)
+  const date = curr.toISOString().substr(0,10);
   const [pedido, setPedido] = React.useState({
     cliente: '',
     telefono: 0,
-    fecha: Date.now()
+    fecha: date
   })
 
   const {  
