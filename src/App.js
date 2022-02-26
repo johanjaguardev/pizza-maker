@@ -10,11 +10,11 @@ function App() {
     <PizzaProvider>
       <div className='pizza'>
         <div className="pizza__left">
-          <h1>Pizza Maker</h1>
           <PizzaMixer></PizzaMixer>
-        </div>
-        <div className='pizza_right'>
           <PizzaForm></PizzaForm>
+        </div>
+        <div className='pizza__right'>
+
           <PizzaDashboard></PizzaDashboard>
         </div>
       </div>

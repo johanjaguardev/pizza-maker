@@ -18,11 +18,14 @@ function PizzaMixer() {
         precio: pizza.precio + precio,
         ingredientes: [...pizza.ingredientes, nombre]
       })
-      e.target.disabled = true
+      e.target.classList.add('choosen')
     } else {
-      pizza.ingredientes = pizza.ingredientes.filter((i)=> i!== nombre)
-      pizza.precio = pizza.precio - precio
-      e.target.disabled = false
+      setPizza({
+        nombre: pizza.nombre,
+        precio: pizza.precio - precio,
+        ingredientes: pizza.ingredientes.filter((i)=> i!== nombre)
+      }) 
+      e.target.classList.remove('choosen')
     }
   }
   const onChangeNameInput = (e) => {
@@ -45,7 +48,6 @@ function PizzaMixer() {
   }, [])
   return(
     <div className="mixer">
-      <h2>Mixer</h2>
       <input 
         className="mixer__name"
         placeholder='Nombre de la pizza:'
@@ -66,7 +68,6 @@ function PizzaMixer() {
           ${pizza.ingredientes.length >= 15 && pizza.nombre !== "" && 'green'} 
           ${(pizza.ingredientes.length < 15 || pizza.nombre === "" ) &&'red'}`}>
             Tu pizza lleva {pizza.ingredientes.length} ingredientes</p>
-        <button className='mixer__create-btn' disabled={pizza.ingredientes.length < 15 || pizza.nombre === ""}>Crear Pizza</button>
       </div>
     </div>
  
