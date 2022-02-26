@@ -17,12 +17,17 @@ function PizzaDashboard() {
   }, [])
   return(<div className="dashboard">
     <h2>Pizza Dashboard</h2>
-    <ul className="dashboard__list">
+    <ol className="dashboard__list">
       {pizzas.map(pizza => 
       <li key={pizza.id} className="pizza__list-item">
-          {pizza.nombre} - {pizza.ingredientes} -  {pizza.precio}
+          Nombre de Pizza: {pizza.nombre}<br/>
+          Ingredientes: {pizza.ingredientes.map(i=> `${i}, `)}<br/>
+          Precio: ${pizza.precio}<br/>
+          Cliente: {pizza.cliente}<br/>
+          Teléfono: {pizza.telefono}<br/>
+          Fecha: {pizza.fecha}<br/>
       </li>)}
-    </ul>  
+    </ol>  
   </div>)
 }
 
