@@ -1,30 +1,28 @@
 import React from "react"
 import { PizzaContext } from './../PizzaContext'
+import { createPizza } from './../services/pizzas'
 import './style.scss'
 
 function PizzaForm() {
-  const curr = new Date()
-  curr.setDate(curr.getDate() + 3)
-  const date = curr.toISOString().substr(0,10);
-  const [pedido, setPedido] = React.useState({
-    cliente: '',
-    telefono: 0,
-    fecha: date
-  })
-
+  const savePizza = () => {
+    createPizza(pizza)    
+  }
   const {  
-    pizza
+    pizza, setPizza
   } = React.useContext(PizzaContext)
   return (
     <form className="form">
       <fieldset>
         <label htmlFor="cliente">Cliente: </label>
         <input type="text" name="cliente" className="form__cliente"
-        value={pedido.cliente} onChange={(e)=>{
-          setPedido({
+        value={pizza.cliente} onChange={(e)=>{
+          setPizza({
+            nombre: pizza.nombre,
+            precio: pizza.precio,
+            ingredientes: pizza.ingredientes,
             cliente: e.target.value,
-            fecha: pedido.fecha,
-            telefono: pedido.telefono
+            telefono: pizza.telefono,
+            fecha: pizza.fecha
           })
         }}/>
       </fieldset>
@@ -36,11 +34,14 @@ function PizzaForm() {
       <fieldset>
         <label htmlFor="telefono">Teléfono: </label>
         <input type="number" name="telefono" className="form__telefono"
-        value={pedido.telefono} onChange={(e)=>{
-          setPedido({
-            cliente: pedido.cliente,
-            fecha: pedido.fecha,
-            telefono: e.target.value
+        value={pizza.telefono} onChange={(e)=>{
+          setPizza({
+            nombre: pizza.nombre,
+            precio: pizza.precio,
+            ingredientes: pizza.ingredientes,
+            cliente: pizza.cliente,
+            telefono: e.target.value,
+            fecha: pizza.fecha
           })
         }}/>
       </fieldset>
@@ -50,12 +51,15 @@ function PizzaForm() {
       </fieldset>
       <fieldset>
         <label htmlFor="fecha">Fecha: </label>
-        <input type="date" name="fecha" className="form__fecha" value={pedido.fecha}
+        <input type="date" name="fecha" className="form__fecha" value={pizza.fecha}
           onChange={(e)=>{
-          setPedido({
-            cliente: pedido.cliente,
-            fecha: e.target.value,
-            telefono: pedido.telefono
+          setPizza({
+            nombre: pizza.nombre,
+            precio: pizza.precio,
+            ingredientes: pizza.ingredientes,
+            cliente: pizza.cliente,
+            telefono: pizza.telefono,
+            fecha: e.target.value
           })
         }}/>
       </fieldset>
@@ -65,9 +69,10 @@ function PizzaForm() {
           disabled = {
             pizza.ingredientes.length < 15 ||
             pizza.nombre === "" ||
-            pedido.cliente === "" ||
-            pedido.telefono === 0
+            pizza.cliente === "" ||
+            pizza.telefono === 0
           }
+          onClick={savePizza}
           title="Please choose 15 ingredientes, an name for the pizza and fill out all the fields."
           >
           Guardar Pizza

@@ -16,24 +16,23 @@ function PizzaMixer() {
       setPizza({
         nombre: pizza.nombre,
         precio: pizza.precio + precio,
-        ingredientes: [...pizza.ingredientes, nombre]
+        ingredientes: [...pizza.ingredientes, nombre],
+        cliente: pizza.cliente,
+        telefono: pizza.telefono,
+        fecha: pizza.fecha
       })
       e.target.classList.add('choosen')
     } else {
       setPizza({
         nombre: pizza.nombre,
         precio: pizza.precio - precio,
-        ingredientes: pizza.ingredientes.filter((i)=> i!== nombre)
+        ingredientes: pizza.ingredientes.filter((i)=> i!== nombre),
+        cliente: pizza.cliente,
+        telefono: pizza.telefono,
+        fecha: pizza.fecha
       }) 
       e.target.classList.remove('choosen')
     }
-  }
-  const onChangeNameInput = (e) => {
-    setPizza({
-      nombre: e.target.value,
-      ingredientes: pizza.ingredientes,
-      precio: pizza.precio
-    })
   }
 
   useEffect(() => {
@@ -52,8 +51,16 @@ function PizzaMixer() {
         className="mixer__name"
         placeholder='Nombre de la pizza:'
         name="name"
-        onChange={(e)=> onChangeNameInput(e)}
-      ></input>
+        onChange={(e)=>{
+          setPizza({
+            nombre: e.target.value,
+            precio: pizza.precio,
+            ingredientes: pizza.ingredientes,
+            cliente: pizza.cliente,
+            telefono: pizza.telefono,
+            fecha: pizza.fecha
+          })
+      }}></input>
       <div className="mixer__buttons">
         {listaIngredientes.map(ingrediente => 
         <button
