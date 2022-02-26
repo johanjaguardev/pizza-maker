@@ -13,8 +13,7 @@ function PizzaForm() {
   })
 
   const {  
-    pizza,
-    setPizza
+    pizza
   } = React.useContext(PizzaContext)
   return (
     <form className="form">
