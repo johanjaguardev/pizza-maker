@@ -4,7 +4,14 @@
   flex-direction: row;
   font-family: 'Roboto Slab', serif;
 
-  &__left {
+  &__left , &__right {
+    overflow-y: auto;
+    max-height: 100vh;
     width: 50%;
+  }
+
+  &__left {
+    background-color: whitesmoke;
+    height: 100vh;
   }
 }
