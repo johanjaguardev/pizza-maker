@@ -1,6 +1,6 @@
 .mixer {
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 
@@ -12,11 +12,10 @@
     font-family: 'Roboto Slab', serif;
     font-size: 14px;
     font-weight: 800;
-    margin: .2em;
-    padding: .2em .5em;
+    margin: .1em .2em;
+    padding: .1em .2em;
 
-    &:disabled,
-    &[disabled],
+    &.choosen,
     &:hover,
     &:focus {
       border: 1px solid #999999;
@@ -24,20 +23,19 @@
       color: lime;;
     }
 
-    &:disabled,
-    &[disabled]{
+    &.choosen {
       color: lightgreen;
-      cursor: not-allowed;
     }
   }
 
   &__name {
-    margin: .2em 0;
+    margin: .1em 0;
     font-family: 'Roboto Slab', serif;
-    font-size: 32px;
+    font-size: 24px;
   }
 
   &__count {
+    margin: 0;
     &.red {
       color: red;
     }
