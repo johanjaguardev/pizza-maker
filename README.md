@@ -1,4 +1,21 @@
-Problema:
+Pasos para reproducir:
+1. hacer git clone del siguiente repositorio: https://github.com/johanjaguardev/pizza-maker
+
+git clone https://github.com/johanjaguardev/pizza-maker
+
+2. ejecutar el comando  npm install
+
+npm install
+
+3. ejecutar el comando dev, este iniciara tanto el backend (jsonServer), como el frontend (react)
+
+npm run dev
+
+4. enjoy
+
+
+Descripcion del Problema:
+
 Prueba desarrollador front .
 En esta prueba deseo evaluar varios aspectos en cuanto al desarrollo web con REACTjs , dada
 solo una idea deseo evaluar , la creatividad y la forma de solucionar problemas, puedes usar
