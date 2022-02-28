@@ -1,0 +1,72 @@
+.mixer {
+  background-color: whitesmoke;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__button {
+    background: green;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    font-weight: 800;
+    margin: .1em .2em;
+    padding: .1em .2em;
+
+    &.choosen,
+    &:hover,
+    &:focus {
+      border: 1px solid #999999;
+      background-color: darkgreen;
+      color: lime;;
+    }
+
+    &.choosen {
+      color: lightgreen;
+    }
+  }
+
+  &__name {
+    margin: .1em 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+  }
+
+  &__count {
+    margin: 0;
+    &.red {
+      color: red;
+    }
+    &.green {
+      color: green;
+    }
+  }
+
+  &__create-btn {
+    background: green;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin: .2em;
+    padding: .2em 1em;
+
+    &:disabled,
+    &[disabled],
+    &:hover,
+    &:focus {
+      border: 1px solid #999999;
+      background-color: darkgreen;
+      color: lightgreen;
+    }
+
+    &:disabled,
+    &[disabled]{
+      cursor: not-allowed;
+    }
+  }
+}

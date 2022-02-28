@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+.pizza {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto Slab', serif;
+
+  &__left , &__right {
+    overflow-y: auto;
+    max-height: 100vh;
+    width: 50%;
+  }
+
+  &__left {
+    background-color: whitesmoke;
+    height: 100vh;
+  }
+}

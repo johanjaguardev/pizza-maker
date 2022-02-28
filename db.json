@@ -1,0 +1,210 @@
+{
+  "masaBase": {
+    "precio": 10000
+  },
+  "ingredientes": [
+    {
+      "id": 0,
+      "nombre": "pollo",
+      "precio": 5000
+    },
+    {
+      "id": 1,
+      "nombre": "peperoni",
+      "precio": 4500
+    },
+    {
+      "id": 2,
+      "nombre": "queso",
+      "precio": 3000
+    },
+    {
+      "id": 3,
+      "nombre": "carne",
+      "precio": 3000
+    },
+    {
+      "id": 4,
+      "nombre": "jalapeños",
+      "precio": 3000
+    },
+    {
+      "id": 5,
+      "nombre": "cilantro",
+      "precio": 3000
+    },
+    {
+      "id": 6,
+      "nombre": "tomate",
+      "precio": 3000
+    },
+    {
+      "id": 7,
+      "nombre": "BBQ",
+      "precio": 3000
+    },
+    {
+      "id": 8,
+      "nombre": "piña",
+      "precio": 3000
+    },
+    {
+      "id": 9,
+      "nombre": "ciruelas",
+      "precio": 3000
+    },
+    {
+      "id": 10,
+      "nombre": "uvas pasas",
+      "precio": 3000
+    },
+    {
+      "id": 11,
+      "nombre": "tocineta",
+      "precio": 3000
+    },
+    {
+      "id": 12,
+      "nombre": "cordero",
+      "precio": 3000
+    },
+    {
+      "id": 13,
+      "nombre": "pimenton",
+      "precio": 3000
+    },
+    {
+      "id": 14,
+      "nombre": "cebolla",
+      "precio": 3000
+    },
+    {
+      "id": 15,
+      "nombre": "queso cheddar",
+      "precio": 3000
+    },
+    {
+      "id": 16,
+      "nombre": "pimienta",
+      "precio": 3000
+    },
+    {
+      "id": 17,
+      "nombre": "champiñones",
+      "precio": 3000
+    },
+    {
+      "id": 18,
+      "nombre": "lechuga",
+      "precio": 3000
+    },
+    {
+      "id": 19,
+      "nombre": "canela",
+      "precio": 3000
+    },
+    {
+      "id": 20,
+      "nombre": "rugula",
+      "precio": 3000
+    },
+    {
+      "id": 21,
+      "nombre": "chorizo",
+      "precio": 3000
+    },
+    {
+      "id": 22,
+      "nombre": "maiz",
+      "precio": 3000
+    },
+    {
+      "id": 23,
+      "nombre": "aceitunas",
+      "precio": 3000
+    },
+    {
+      "id": 24,
+      "nombre": "anchoas",
+      "precio": 3000
+    },
+    {
+      "id": 25,
+      "nombre": "carne desmechada",
+      "precio": 3000
+    },
+    {
+      "id": 26,
+      "nombre": "jamon",
+      "precio": 3000
+    },
+    {
+      "id": 27,
+      "nombre": "fresas",
+      "precio": 3000
+    },
+    {
+      "id": 28,
+      "nombre": "mortadela",
+      "precio": 3000
+    },
+    {
+      "id": 29,
+      "nombre": "cereza",
+      "precio": 3000
+    }
+  ],
+  "pizzas": [
+    {
+      "nombre": "Champi",
+      "precio": 61500,
+      "ingredientes": [
+        "pollo",
+        "peperoni",
+        "BBQ",
+        "tomate",
+        "queso",
+        "carne",
+        "ciruelas",
+        "piña",
+        "uvas pasas",
+        "champiñones",
+        "mortadela",
+        "carne desmechada",
+        "chorizo",
+        "pimienta",
+        "jalapeños",
+        "queso cheddar"
+      ],
+      "cliente": "Johan",
+      "telefono": "3044704118",
+      "fecha": "2022-03-01",
+      "id": 1
+    },
+    {
+      "nombre": "Pepperoni Diana",
+      "precio": 57000,
+      "ingredientes": [
+        "chorizo",
+        "jamon",
+        "carne desmechada",
+        "pollo",
+        "jalapeños",
+        "tocineta",
+        "BBQ",
+        "pimenton",
+        "queso",
+        "ciruelas",
+        "aceitunas",
+        "carne",
+        "cilantro",
+        "champiñones",
+        "uvas pasas"
+      ],
+      "cliente": "Diana",
+      "telefono": "111111111",
+      "fecha": "2022-03-01",
+      "id": 2
+    }
+  ]
+}

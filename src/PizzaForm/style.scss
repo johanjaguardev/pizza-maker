@@ -1,0 +1,53 @@
+.form {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  input[type="text"], input[type="number"], input[type="date"]  {
+    border-radius: 7px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    margin: 0;
+    padding: .2em;
+  }
+
+  label {
+    display: block;
+    float: left;
+    width: 75px;
+  }
+
+  fieldset {
+    align-items: center;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    background: green;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+    padding: .2em 1em;
+
+    &:disabled,
+    &[disabled],
+    &:hover,
+    &:focus {
+      border: 1px solid #999999;
+      background-color: darkgreen;
+      color: lightgreen;
+    }
+
+    &:disabled,
+    &[disabled]{
+      cursor: not-allowed;
+    }
+  }
+}
