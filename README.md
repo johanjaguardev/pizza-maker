@@ -65,18 +65,19 @@ Una vez que el state era general termine de adicionar los datos necesarios y pos
 se hicieron posteriores modificaciones de css, y es el estado actual del aplicativo.
 
 Changelog
-1. install react by create-react-app
-2. install json server
-3. create components mixer, form and dashboard
-4. create first data in db.json (ingredients and a sample of pizza)
-5. read the db in react with a service
-6. modify db to add index to each ingredient.
-7. create buttons with listeners
-8. create state and modify pizza price
-9. read pizzas
-10. convert state of pizza mixer to a global with react context to read in the form component
-11. create service function to create a pizza in db
-12. formating the app
+1. instalar react con create-react-app
+2. instalar json server
+3. instalr concurrently y generar un script para iniciar el backend y el frontend con un comando
+4. crear componentes mixer, form y dashboard
+5. crear primeros datos de ingredientes en la db.json
+6. leer los primeros datos en react con un servicio
+7. agregar indices a los ingredientes en db
+8. crear botones en componente mixer con listeners por ahora sin accion
+9. crear un estado para manejar el precio de la pizza por la accion de los botones
+10. leer el listado de pizzas de la db
+11. convertir el estado de pizza hecho en el mixer en un estado global a traves de react.context para poder usar el mismo state en los componentes form y mixer
+12. crear la funcion para crear un registro en la base de datos en el servicio.
+13. dar algo de estilos css a la app.
 
 
 NEXT STEPS
