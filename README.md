@@ -80,15 +80,13 @@ Changelog
 13. dar algo de estilos css a la app.
 
 
-NEXT STEPS
+PROXIMOS PASOS
 
-0. Publish first version
-1. function to update or create the app
-2. delete function in dashboard components
-3. improve responsive behavior
-4. give some visual helps
-5. unit test
-6. checking accesibility
-7. give an icon to each ingredient and show it in the menu
-8. create a pizza with layers with each ingredient
+1. funcion en el servicio para actualizar y eliminar registros en la lista de pizzas
+2. implementar delete en el dashboard
+3. responsive css
+4. Dar algunas ayudas visuales y de accesibilidad
+5. unit test 
+6. poner un icono por cada ingrediente
+7. generar una simulacion de la pizza de modo grafico (dibujar el resultado.)
 
